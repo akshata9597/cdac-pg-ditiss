@@ -33,5 +33,5 @@ Define DNS nameserver
 ```bash
 sudo nano /etc/resolv.conf 
 ```
-image 2![Screenshot 2024-02-21 151016](https://github.com/akshata9597/cdac-pg-ditiss/assets/149655684/595fe9fc-0333-4b39-95c7-384a73076f20)
+image 2
 
