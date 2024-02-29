@@ -72,7 +72,7 @@ sudo krb5_newrealm
 
 ```
 ```bsh
-kadmin.local: addprinc -randkey host/krb5.ac.com
+	kadmin.local: addprinc -randkey host/krb5.ac.com
 ```
 ```bash
 	kadmin.local: ktadd host/krb5ac.com
