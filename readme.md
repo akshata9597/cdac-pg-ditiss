@@ -84,21 +84,24 @@ sudo krb5_newrealm
 ```
 ![image](https://github.com/akshata9597/cdac-pg-ditiss/assets/149655684/f495bc83-b0a3-4692-b499-f0faf914bbc7)
  Restart Kerberos Service and check the status
+
 ```bash
-sudo systemctl restart krb5-admin-server.service (Restart)
+sudo systemctl restart krb5-admin-server.service 
 ```
 ```bash
-sudo systemctl status krb5-admin-server.service (Status)
+sudo systemctl status krb5-admin-server.service 
 ```
 ## Client Configuration
 ### Step 4: Installing and configuring Kerberos Client
 Configure FQDN ‘client.ac.com’
+Install DNS server
 ```bash
-sudo apt install bind9 bind9utils dnsutils (Install DNS server)
+sudo apt install bind9 bind9utils dnsutils 
 ```
-```bash
-sudo nano /etc/hosts (Define hosts entry for new domain)
+Define hosts entry for new domain
 
+```bash
+sudo nano /etc/hosts 
 ```
 ![image](https://github.com/akshata9597/cdac-pg-ditiss/assets/149655684/e44e7d8a-6afe-448a-a4a5-5f2fa34ffae7)
 
