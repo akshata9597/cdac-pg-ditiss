@@ -43,6 +43,7 @@ sudo nano /etc/resolv.conf
 ![image](https://github.com/akshata9597/cdac-pg-ditiss/assets/149655684/1b6370b5-0e02-4969-98d7-0ebc2b4cec41)
 
  Testing
+ 
 ![image](https://github.com/akshata9597/cdac-pg-ditiss/assets/149655684/8cba1d40-514d-42e6-bd29-48449a106241)
 
 ### Step 2:Install KDC Server
@@ -65,8 +66,15 @@ sudo krb5_newrealm
 
 ```bash
 	sudo kadmin.local
+```
+```bash
 	kadmin.local: addprinc root/admin 
-	kadmin.local: addprinc -randkey host/krb5.ac.com
+
+```
+```bsh
+kadmin.local: addprinc -randkey host/krb5.ac.com
+```
+```bash
 	kadmin.local: ktadd host/krb5ac.com
 
 ```
@@ -78,6 +86,8 @@ sudo krb5_newrealm
  Restart Kerberos Service and check the status
 ```bash
 sudo systemctl restart krb5-admin-server.service (Restart)
+```
+```bash
 sudo systemctl status krb5-admin-server.service (Status)
 ```
 ## Client Configuration
@@ -85,6 +95,8 @@ sudo systemctl status krb5-admin-server.service (Status)
 Configure FQDN ‘client.ac.com’
 ```bash
 sudo apt install bind9 bind9utils dnsutils (Install DNS server)
+```
+```bash
 sudo nano /etc/hosts (Define hosts entry for new domain)
 
 ```
@@ -139,32 +151,38 @@ sudo kadmin
 Step 5: Testing the configurations
 ```bash
 sudo useradd -m -s /bin/bash kerbuser
+```
+```bash
  sudo kadmin.local
 ```
 ![image](https://github.com/akshata9597/cdac-pg-ditiss/assets/149655684/5846f6cd-d50c-4d97-b331-206418919a8b)
 	Edit ssh configuration ‘/etc/ssh/sshd_config’ & uncomment the ‘GSSAPIAuthentication	and enable it by changing the value to ‘yes’
 
  ![image](https://github.com/akshata9597/cdac-pg-ditiss/assets/149655684/a35e826b-ff24-43db-9021-f1ab3c313b22)
+
+
 Restart sshd service
+
 ```bash
  sudo systemctl restart sshd
 ```
-```bash	sudo systemctl status sshd
+```bash
+  sudo systemctl status sshd
 ```
 ```bash
-sudo useradd -m -s /bin/bash kerbuser
+  sudo useradd -m -s /bin/bash kerbuser
 ```
 ```bash
-kinit kerbuser
+   kinit kerbuser
 ```
 ```bash
-klist
+  klist
 ```
 ```bash
- Run kinit kerbuser
+   Run kinit kerbuser
 ```
 ```bash
-Run klist
+   Run klist
 ```
 Testing - SSH
 ```bash
