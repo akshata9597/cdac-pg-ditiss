@@ -23,7 +23,8 @@ Create new file for domain
 ```bash
 sudo nano /etc/bind/krb5.ac.com
 ```
-image 1 
+![image](https://github.com/akshata9597/cdac-pg-ditiss/assets/149655684/acd43c54-ccdb-44dc-8e88-d69e74e78b7e)
+
 
 Define zone scope for domain
 ```bash
